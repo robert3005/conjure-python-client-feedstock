@@ -21,6 +21,7 @@ requirements:
   run:
     - python
     - enum34  # [py<34]
+    - future
     - requests
     - typing
 
