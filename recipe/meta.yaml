@@ -1,5 +1,5 @@
 {% set name = "conjure-python-client" %}
-{% set version = "1.2.1" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 47a9ff2ddbaddff4186a91bb6be82e1f0fb98f22791c4262b44cc0784c5e6910
+  sha256: c0149434c86a6544c24fc8d3e7ab7a6e57a6307163f1f33e28a6c4de865e3d05
 
 build:
   number: 0
