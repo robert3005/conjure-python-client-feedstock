@@ -1,17 +1,16 @@
-{% set name = "conjure-python-client" %}
 {% set version = "1.7.3" %}
 
 package:
-  name: {{ name|lower }}
+  name: conjure-python-client
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/c/conjure-python-client/conjure-python-client-{{ version }}.tar.gz
   sha256: 2f990318e158b40c70e1d6e74ad37f52869025ac333ca487eddab156ed88c719
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
@@ -23,7 +22,7 @@ requirements:
     - enum34  # [py<34]
     - future
     - requests
-    - typing
+    - typing  # [py<=37]
 
 test:
   imports:
