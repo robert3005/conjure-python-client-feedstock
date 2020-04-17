@@ -1,4 +1,4 @@
-{% set version = "1.8.0" %}
+{% set version = "1.10.0" %}
 
 package:
   name: conjure-python-client
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/conjure-python-client/conjure-python-client-{{ version }}.tar.gz
-  sha256: 774b0905862cba9518fd8df48afd69f160515efa2af310dd702b27122f37de13
+  sha256: e47365e95583797268de67b198636173fbede9338e5bf50a3235bd4f28fb1b6a
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -33,7 +33,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'Python client and JSON encoders for use with generated Conjure clients'
+  summary: Python client and JSON encoders for use with generated Conjure clients
 
 extra:
   recipe-maintainers:
